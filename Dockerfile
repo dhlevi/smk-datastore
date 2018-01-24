@@ -12,6 +12,8 @@ RUN mkdir -p \
 COPY bin/ /usr/bin/
 COPY docker-entrypoint.sh /
 
+RUN chmod 001 docker-entrypoint.sh
+
 USER couchdb
 
 #copy in the local.ini
